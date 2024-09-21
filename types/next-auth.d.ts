@@ -7,7 +7,7 @@ interface ResourceAccess extends Record<string, { roles: string[] }> {
 
 declare module 'next-auth/jwt' {
   interface JWT extends DefaultJWT {
-    resource_access: ResourceAccess
+    resource_access: ResourceAccess | undefined
     roles: string[] | undefined
   }
 }
