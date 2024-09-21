@@ -1,3 +1,13 @@
+# NextAuth Keycloak Boilerplate
+
+![Admin Page]('https://github.com/krittindev/nextauth-keycloak-boilerplate/assets/example-admin-page.png')
+
+## Tech Stack
+
+- Nextjs 14 (App Router)
+- NextAuth (Keycloak Provider)
+- Shadcn/ui
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
