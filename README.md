@@ -1,6 +1,6 @@
 # NextAuth Keycloak Boilerplate
 
-![Admin Page]('https://github.com/krittindev/nextauth-keycloak-boilerplate/assets/example-admin-page.png')
+![Admin Page]('https://github.com/krittindev/nextauth-keycloak-boilerplate/blob/main/assets/example-admin-page.png')
 
 ## Tech Stack
 
