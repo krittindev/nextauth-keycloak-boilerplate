@@ -21,8 +21,9 @@ export const config = {
       if (!accessTokenJwt) return token
       const accessToken = parseJwt(accessTokenJwt)
       if (!accessToken) return token
-      const roles =
-        accessToken.resource_access[process.env.KEYCLOAK_CLIENT_ID].roles
+      const resourceAccess = accessToken.resource_access
+      if (!resourceAccess) return token
+      const roles = resourceAccess[process.env.KEYCLOAK_CLIENT_ID].roles
       return { ...token, roles }
     },
     async session({ session, token }) {
