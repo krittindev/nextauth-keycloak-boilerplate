@@ -9,8 +9,9 @@ export const config = {
   matcher: ['/api/export/:path*', '/admin/:path*', '/user/:path*'],
 }
 
-const middleware: NextMiddlewareWithAuth = (req) => {
+const nextAuthMiddleware: NextMiddlewareWithAuth = (req) => {
   const token = req.nextauth.token
+  console.info({ nextAuthMiddleware: { token } })
   const pathname = req.nextUrl.pathname
   const forbidden = NextResponse.rewrite(new URL('/forbidden', req.url))
 
@@ -31,4 +32,6 @@ const middleware: NextMiddlewareWithAuth = (req) => {
   return forbidden
 }
 
-export default withAuth(middleware)
+const middleware = withAuth(nextAuthMiddleware)
+
+export default middleware
