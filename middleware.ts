@@ -11,7 +11,6 @@ export const config = {
 
 const nextAuthMiddleware: NextMiddlewareWithAuth = (req) => {
   const token = req.nextauth.token
-  console.info({ nextAuthMiddleware: { token } })
   const pathname = req.nextUrl.pathname
   const forbidden = NextResponse.rewrite(new URL('/forbidden', req.url))
 
