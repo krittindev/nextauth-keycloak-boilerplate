@@ -113,9 +113,6 @@ export const config: NextAuthOptions = {
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
-  // pages: {
-  //   signIn: '/auth/signin',
-  // },
   cookies: {
     sessionToken: {
       name: `${COOKIE_PREFIX}next-auth.session-token`,
